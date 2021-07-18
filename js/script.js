@@ -123,6 +123,19 @@ function search(input, list) {
 }
 
 /**
+ * Event listener function:
+ */
+
+function listenForInput() {
+   const header = document.querySelector('.header');
+   const searchInput = document.querySelector('#search');
+
+   searchInput.addEventListener('input', () => {
+      search(searchInput, data);
+   });
+}
+
+/**
  * startApp() function calls showPage & addPagination,
  * with default arguments of data and page 1:
  */
@@ -134,11 +147,4 @@ function startApp(list, pageNum) {
 // Call functions:
 addSearch();
 startApp(data, 1);
-
-// Consts require addSearch():
-const header = document.querySelector('.header');
-const searchInput = document.querySelector('#search');
-
-searchInput.addEventListener('input', () => {
-   search(searchInput, data);
- });
+listenForInput();
