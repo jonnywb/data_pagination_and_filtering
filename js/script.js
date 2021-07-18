@@ -146,15 +146,7 @@ startApp(data, 1);
 // Consts require addSearch():
 const header = document.querySelector('.header');
 const searchInput = document.querySelector('#search');
-const submit = header.querySelector('button');
 
-/***** Event Listeners for searchbar: ****/  
-
-submit.addEventListener('click', (event) => {
-  event.preventDefault();
-  search(searchInput, data);
-});
-
-searchInput.addEventListener('keyup', () => {
+searchInput.addEventListener('input', () => {
    search(searchInput, data);
  });
