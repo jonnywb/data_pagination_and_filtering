@@ -59,7 +59,7 @@ function showPage(list, page) {
 
 
 /**
- * addPaginaation() Decides how many pages will be needed
+ * addPagination() Decides how many pages will be needed
  * based on the number of objects in the array,
  * and inserts buttons for switching between pages.
  */
@@ -127,7 +127,6 @@ function search(input, list) {
  */
 
 function listenForInput() {
-   const header = document.querySelector('.header');
    const searchInput = document.querySelector('#search');
 
    searchInput.addEventListener('input', () => {
