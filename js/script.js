@@ -3,6 +3,7 @@ Treehouse Techdegree:
 FSJS Project 2 - Data Pagination and Filtering
 ***********************************************/
 
+
 /**
  * addSearch() function adds the HTML for the searchbar.
  */
@@ -83,8 +84,10 @@ function addPagination(list) {
       linkUL.insertAdjacentHTML('beforeend', pageLI);
    }
 
-   page1 = linkUL.firstElementChild.querySelector('button');
-   page1.className = 'active';
+   if (linkUL.firstElementChild) {
+      const firstButton = linkUL.firstElementChild.querySelector('button');
+      firstButton.className = 'active';
+   }
    linkUL.addEventListener('click', (event) => {
       const pageButtons = linkUL.querySelectorAll('button');
       
@@ -95,7 +98,7 @@ function addPagination(list) {
    
          event.target.className = 'active';
          const pageNum = event.target.textContent;
-         showPage(data, pageNum);
+         showPage(list, pageNum);
       } 
    });
 }
@@ -120,10 +123,9 @@ function search(input, list) {
    }
 
    if (input.value.length === 0) {
-      startApp();
+      startApp(list, 1);
    } else {
-      showPage(newList, 1);
-      addPagination(newList);
+      startApp(newList, 1)
    }
 }
 
@@ -131,14 +133,14 @@ function search(input, list) {
  * startApp() function calls showPage & addPagination,
  * with default arguments of data and page 1:
  */
-function startApp() {
-   showPage(data, 1);
-   addPagination(data);
+function startApp(list, pageNum) {
+   showPage(list, pageNum);
+   addPagination(list);
 }
 
 // Call functions:
 addSearch();
-startApp();
+startApp(data, 1);
 
 // Consts require addSearch():
 const header = document.querySelector('.header');
