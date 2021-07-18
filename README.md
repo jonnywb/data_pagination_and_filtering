@@ -19,3 +19,7 @@ plugins, or code snippets for any aspect of this project, including the paginati
 
 >After completing this project you'll have some powerful JavaScript skills and 
 a strong second portfolio piece to show off to potential employers.
+
+#### Extra Credit:
+
+>Dynamically create and add a search bar. Avoid making any changes in the index.html file and instead use your JavaScript skills for this.
