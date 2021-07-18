@@ -10,16 +10,13 @@ FSJS Project 2 - Data Pagination and Filtering
 
  function addSearch() {
    const header = document.querySelector('.header');
-   const label = document.createElement('label');
-   label.className = 'student-search';
-   label.htmlFor = 'search';
-   label.innerHTML = `
-      <span>Search by name</span>
-      <input id="search" placeholder="Search by name...">
-      <button type="button"><img src="img/icn-search.svg" 
-         alt="Search icon"></button>`;
-
-   header.insertAdjacentElement('beforeend', label);
+   const searchBar = `
+      <label for="search" class="student-search">
+         <span>Search by name</span>
+         <input id="search" placeholder="Search by name...">
+         <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
+      </label>`;
+   header.innerHTML += searchBar;
 }
 
 /**
