@@ -23,8 +23,6 @@ FSJS Project 2 - Data Pagination and Filtering
  * The showPage() function creates the HTML elements
  * that are displayed and dynamically inserts
  * the values for the required objects.
- * @param {array} list - An Array of student objects.
- * @param {number} page - The current page number.
  */
 
 function showPage(list, page) {
@@ -64,7 +62,6 @@ function showPage(list, page) {
  * addPaginaation() Decides how many pages will be needed
  * based on the number of objects in the array,
  * and inserts buttons for switching between pages.
- * @param {array} list - An array of Student objects.
  */
 
 function addPagination(list) {
@@ -104,8 +101,6 @@ function addPagination(list) {
 /**
  * Search function searches for names that contain string, 
  * and calls showPage/addPag' functions with those results.
- * @param {element} input - HTML element
- * @param {array} list - An array containing student objects.
  */
 
 function search(input, list) {
