@@ -115,9 +115,10 @@ function search(input, list) {
    let newList = [];
 
    for ( let i = 0; i < list.length ; i++) {
-      const name = list[i].name.first + list[i].name.last;
+      const name = `${list[i].name.first} ${list[i].name.last}`;
       if (input.value.length !== 0 &&
-          name.toLowerCase().includes(input.value.toLowerCase())) {
+          name.toLowerCase().includes(input.value.toLowerCase())
+          && input.value !== ' ') {
          newList.push(list[i]);
       }
    }
