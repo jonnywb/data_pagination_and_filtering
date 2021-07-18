@@ -1,5 +1,5 @@
 # Data Pagination And Filtering
-###Treehouse FSJS Unit2 Project
+### Treehouse FSJS Unit2 Project
 
 >In this project, you'll use a common web development technique known as “pagination” 
 to enhance the usability of a web page.
