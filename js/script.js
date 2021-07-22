@@ -65,8 +65,7 @@ function showPage(list, page) {
  */
 
 function addPagination(list) {
-   const listLen = list.length;
-   const requiredPages = Math.ceil(listLen / 9);
+   const requiredPages = Math.ceil(list.length / 9);
    const linkUL = document.querySelector('.link-list');
    linkUL.innerHTML = '';
 
